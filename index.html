@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Catalogue</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="catalogue">
+        <table>
+            <thead>
+                <tr>
+                    <th>Cover</th>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Pages</th>
+                    <th>Read</th>
+                    <th>Edit</th>
+                    <th>Delete Book</th>
+                </tr>
+            </thead>
+            <tbody id="lib-cat-body">
+            </tbody>
+        </table>
+    </div>
+
+    <dialog id="new-book">
+        <form method="dialog" id="book-form">
+
+            <p>Add new book to library</p>
+            <p class="form-question">
+                <label>
+                    Cover Image Source:
+                    <input type="text" id="new-book-source"/>
+                </label>
+            </p>
+            <p class="form-question">
+                <label>
+                    Title:
+                    <input type="text" id="new-book-title" required />
+                </label>
+            </p>
+            <p class="form-question">
+                <label>
+                    Author:
+                    <input type="text" id="new-book-author" required />
+                </label>
+            </p>
+            <p class="form-question">
+                <label>
+                    Pages:
+                    <input type="number" id="new-book-pages" required />
+                </label>
+            </p>
+            <p class="form-question">
+                <label>
+                    Read:
+                    <input type="radio" id="notread" name="read" value=false required>
+                    <label for="notread">No</label>
+                    <input type="radio" id="yesread" name="read" value=true required>
+                    <label for="yesread">Yes</label>
+                </label>
+            </p>
+
+            <div>
+                <button type="submit" id="submit-book">Submit</button>
+            </div>
+        </form>
+    </dialog>
+    <p>
+        <button id="show-book-dialog">Add New Book</button>
+    </p>
+    <output></output>
+</body>
+</html>
